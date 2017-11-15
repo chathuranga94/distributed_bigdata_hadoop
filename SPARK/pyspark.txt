@@ -1,0 +1,14 @@
+PYSPARK INTERACTIVE TERMINAL   
+======================================================================================
+
+sc.textFile("/home/bibi/Desktop/distributed.csv") \
+    .map(lambda line: line.split(",")) \
+    .map(lambda line: (int(line[0]),float(line[2]))) \
+    .combineByKey( lambda value: (value, 1),
+                   lambda x, value: (x[0] + value, x[1] + 1),
+                   lambda x, y: (x[0] + y[0], x[1] + y[1])) \
+    .map(lambda (label, (value_sum, count)): (label, value_sum / count)) \
+    .collectAsMap()
+
+======================================================================================
+

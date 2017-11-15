@@ -1,0 +1,15 @@
+
+SPARK INSTALL	PYSPARK INTERACTIVE TERMINAL ==========================
+
+http://www.bogotobogo.com/Hadoop/BigData_hadoop_Apache_Spark_PySpark.php
+
+
+
+
+
+STATISTICS ===========================================================
+
+time ./spark.sh
+
+
+
